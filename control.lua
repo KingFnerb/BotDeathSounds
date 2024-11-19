@@ -1,7 +1,6 @@
 local sounds = {
     "bot_death_sound_1.ogg",
     "bot_death_sound_2.ogg",
-    -- Add more sounds as needed
 }
 -- Pick Random Sound
 local function play_random_sound()
@@ -12,8 +11,15 @@ end
 
 --Bot Death
 script.on_event(defines.events.on_entity_died, function(event)
-    local entity = event.entity
-    if entity and (entity.name == "construction-robot" or "logistic-robot") then play_random_sound()
+    local MAX_DISTANCE = 50 
+    for _, player in pairs(game.players) do
+        if player.character.logistic_network then
+            for _, bot in pairs(player.character.logistic_network.robots) do 
+                local distance = ((event.entity.position.x - player.position.x) ^ 2 + (event.entity.position.y - player.position.y) ^ 2) ^ 0.5
+                if bot.unit_number == event.entity.unit_number and distance <= MAX_DISTANCE then
+                    play_random_sound()
+                end
+            end
+        end
     end
 end)
-

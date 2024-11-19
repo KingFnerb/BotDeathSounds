@@ -1,5 +1,5 @@
 # Bot Death Sounds
-A factorio mod that will play some random sounds upon a bot's death.
+A factorio mod that will play some random sounds upon sending one of your personal bots to their death.
 
 ## [Factorio Mod Portal](TBD)
 
