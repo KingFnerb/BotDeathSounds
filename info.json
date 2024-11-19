@@ -1,6 +1,6 @@
 {
     "name": "BotDeathSounds",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "title": "Bot Death Sounds",
     "author": "KingFnerb",
     "description": "Plays a random sound from a folder when a bot dies.",
