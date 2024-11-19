@@ -3,3 +3,8 @@ Version: 1.0.0
 Date: 11.11.2024
     Changes: Original mod publishing
 --------------------------------------------------------------
+Version: 1.0.1
+Date: 11.18.2024
+    Changes: 
+     - Only tracking personal, local bots.
+--------------------------------------------------------------
