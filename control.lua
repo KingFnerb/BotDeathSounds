@@ -11,9 +11,9 @@ end
 
 --Bot Death
 script.on_event(defines.events.on_entity_died, function(event)
-    local MAX_DISTANCE = 50 
+local MAX_DISTANCE = 50 
     for _, player in pairs(game.players) do
-        if player.character.logistic_network then
+        if player.connected and player.character and player.character.valid and player.character.logistic_network then
             for _, bot in pairs(player.character.logistic_network.robots) do 
                 local distance = ((event.entity.position.x - player.position.x) ^ 2 + (event.entity.position.y - player.position.y) ^ 2) ^ 0.5
                 if bot.unit_number == event.entity.unit_number and distance <= MAX_DISTANCE then
